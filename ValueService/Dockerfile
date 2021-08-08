@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["ValueService/ValueService.csproj", "ValueService/"]
+COPY ["ValueService.csproj", "ValueService/"]
 RUN dotnet restore "ValueService/ValueService.csproj"
 COPY . .
 WORKDIR "/src/ValueService"
